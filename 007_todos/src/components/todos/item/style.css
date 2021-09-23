@@ -1,0 +1,12 @@
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+}
+
+.crossed-line {
+  text-decoration: line-through;
+  font-style: italic;
+}
