@@ -1,0 +1,9 @@
+bootstrap eklemek istersen eger cdn i public icerisindeki html e yapistirabilirsin!
+
+
+Module Css nedir?
+
+- ayni seviyedeki iki konpentte iki farkli style dosyasinda ayni isimde class varsa bunlar birbirine karisir
+- className ler uniqe olmali
+- bu yuzden module css kavrami kullanilir
+- style dosyalari olustururken direkt style.css yerine style.module.css olarak kullanmak gerekiyor
