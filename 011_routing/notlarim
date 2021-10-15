@@ -1,0 +1,10 @@
+Oncelikle react-router i kurmak icin:
+    npm install react-router-dom
+    komutu kullanilir
+
+React router da Link ve a etiketlerinin farki:
+    link etiketi sayfayi yenilemez sadece istedigimiz yerleri yeniler
+    a etiketi ise sayfayi komple yeniler
+
+Nesting
+    Ic ice linklemedir
