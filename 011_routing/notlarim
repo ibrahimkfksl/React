@@ -8,3 +8,5 @@ React router da Link ve a etiketlerinin farki:
 
 Nesting
     Ic ice linklemedir
+
+NavLink ile Link arasındaki fark, navlink e style verebiliyoruz, mesela aktif olduğunda rengini değiştirme gibi, aralarındaki fark budur
