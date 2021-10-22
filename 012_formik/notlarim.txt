@@ -1,0 +1,8 @@
+Formik nedir?
+
+Form işlemlerini kolay yönetmek için kullanılan bir araçtır
+
+
+-- Validation
+validation islemleri yupjs ile yapilir!
+yarn add yup

@@ -11,6 +11,7 @@ import About from "./components/About";
 import Home from "./components/Home";
 import Users from "./components/Users";
 import User from "./components/User";
+import Error404 from "./components/Error404";
 
 function App() {
   return (
