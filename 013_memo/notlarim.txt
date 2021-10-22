@@ -1,0 +1,46 @@
+React componentlerindeki gereksiz renderların önüne geçmeye çalışıyoruz. 
+React memo yöntemlerimizden bir tanesi
+
+--memo
+
+- Ana bir component düşünelim, bu componentin içerisinde bir işlem yaptık ve o işlem sonucunda ana componentin render olduğunu düşünelim
+Eğer biz ana componentin altına başka componentler koyarsak o componentler de o değişimden etkilenir ve render olur
+Çözüm
+export default React.memo(Header);
+bu şekilde dışarı aktarılan bir alt component, gereksiz render edilmenin önüne geçer. Header componentindeki proplar ne zaman değişirse o zaman re render edilir
+
+
+
+--useMemo
+
+- ana bir componentten alt bir componente primitive tip gönderildiğinde değişim yoksa export default React.memo(Header); ile re render ı önlüyorduk
+- ana bir componentten alt bir componente obje gönderilirse, işte o zaman değişiklik olmasa bile yine re-render gerçekleşir
+- tamamıyla bellek ile alakalı bir durumdur
+- eğer objeyi componentin dışında tanımlarsan problemden kurtulursun
+- bir başka yöntem ise useMemo hooku dur
+const data = useMemo(() => {
+    return { name: "mehmet" };
+  }, []); //kullanımı useEffect gibi
+- obje bu şekilde tanımlanarak çözüm sağlanabilir
+- burada ikinci parametre olarak girdiğimiz dependency array içerisine yazdığımız obje değerleri güncellendiğinde component re render olur!!!!
+- örneğin içine name yazabiliriz
+
+- useMemo'yu ne zaman kullanabiliriz
+- örneğin bir fonksiyon yazıyoruz bu bize çok uzun bir işlemin ardından bir obje dönsün
+- useMemo içerisinde de bu fonksiyonu çağırsaydık
+- işlem tamamlanmadan render işlemi yapmaz
+- ayrıca sürekli hesaplama yapmasının önüne de geçer!
+- bu yüzden useMemo kullanmak çok önemlidir
+
+
+
+--useCallback
+
+- ana componentte bulunan butonu header kısmına alırsak, ancak arttırma işlemi yine aynı şekilde ana componentte olsa ne olurdu?
+- useCallback ile bir fonksiyon döneriz
+- bu fonksiyon memorize edilmiş oluyor
+- dependency array daki datalar değişene kadar re rendered önlenir
+const increment = useCallback(() => {
+    setNumber((prevState) => prevState + 1) //number ifadesini yok etmek gerekiyor, yoksa gene aynı mantığa geliyor çünkü
+}, [])
+<Header increment={increment}></Header>
