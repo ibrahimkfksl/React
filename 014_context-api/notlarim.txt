@@ -1,0 +1,13 @@
+Context nedir?
+
+- elimizdeki dataları context altındaki tüm componentlere sağlamış oluyoruz
+- bu şekilde state yönetimi olmuş oluyor
+- context tüm componentlerin üstüne konulursa tüm componentler o dataya erişir
+- Redux context e bir örnektir
+- Context Api de buna bir örnektir.(reactın içinde gelir)
+
+Children nedir
+
+- bir componenti <selam>Lorem ipsum dolor</selam> şeklinde kullanalım
+- bu içerideki yazı nereye gitti?
+- selam componenti içerisinde eğer fonksiyon parametresi olarak {children} alırsak bu yazı buraya düşer
