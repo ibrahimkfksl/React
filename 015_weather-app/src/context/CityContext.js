@@ -1,17 +1,13 @@
 import { createContext, useState } from "react";
+//multi context yapicaz
 
-const CityContext = createContext()
+const CityContext = createContext();
 
-export const CityProvider = ({children}) => {
+export const CityProvider = ({ children }) => {
+  const [contextCity, setContextCity] = useState(null);
+  const values = { contextCity, setContextCity };
 
-    const [contextCity, setContextCity] = useState(null)
-    const cityValues = {
-        contextCity,
-        setContextCity
-    }
+  return <CityContext.Provider value={values}>{children}</CityContext.Provider>;
+};
 
-    return <CityContext.Provider value={cityValues}>{children}</CityContext.Provider>
-    
-}
-
-export default CityContext
+export default CityContext;
