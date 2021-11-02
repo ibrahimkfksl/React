@@ -1,0 +1,4 @@
+realtime uygulamalar geliştirebilmek için socket.io kullanılabilir
+Bir kullanıcı sserver üzerinde renk değiştirdiğinde tüm kullanıcılar bundan haberdar oluyor
+Mesajlaşma uygulamalarında kullanılır
+Biz renk uygulaması yapacağız

@@ -1,0 +1,1 @@
+client üzerinden backend e bağlanmak için yarn add socket.io-client paketini kurduk
